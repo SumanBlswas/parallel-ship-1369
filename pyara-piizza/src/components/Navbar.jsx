@@ -10,8 +10,9 @@ function Navbar() {
         justify="space-around"
         align="center"
         bg="#2B6CCD"
-        // position="fixed"
-        // w="full" zIndex="1"
+        position="fixed"
+        w="full"
+        zIndex="1"
       >
         <NavLink to="/">
           <img width={200} src={logo} alt="" />

@@ -8,10 +8,21 @@ function AppContextProvider({ children }) {
 
   const login = () => {
     setIsAuth(true);
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
   };
 
   const logout = () => {
     setIsAuth(false);
+    const details = {
+      name: "",
+      email: "",
+    };
+    localStorage.setItem("details", JSON.stringify(details));
+    setTimeout(() => {
+      window.location.reload();
+    },2000)
   };
 
   const ToggleHandler = () => {

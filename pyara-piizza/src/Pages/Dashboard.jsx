@@ -10,6 +10,7 @@ import Footer from "./Footer";
 function Dashboard() {
   return (
     <Box>
+      <Box h="89.15px"></Box>
       <Flex align="center" bg="#1A5CA3">
         <Box w="48%" p={20}>
           <Heading textAlign="left" color="white">
