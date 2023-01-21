@@ -15,6 +15,8 @@ import {
 import axios from "axios";
 import React from "react";
 import Footer from "../Footer";
+import { Link } from "react-router-dom";
+// import PaymentPage from "./PaymentPage";
 
 function Menu() {
   // let [loading, setLoading] = useState(true);
@@ -50,8 +52,13 @@ function Menu() {
   };
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
-  const handleDelete = (id) => {
+  const handleDelete = (id, price) => {
     setCart(cart.filter((item) => item.id !== id));
+    localStorage.setItem("Cart-Price", totalPrice - price);
+  };
+
+  const handleAddPrice = () => {
+    localStorage.setItem("Cart-Price", totalPrice);
   };
 
   return (
@@ -59,6 +66,9 @@ function Menu() {
       <SecondNav />
       <Box>
         <Box w="full" h="36px"></Box>
+        {/* <Routes>
+          
+        </Routes> */}
         <HStack spacing="40px" mt="6%">
           <Box w="70%" h="full" bg="yellow.200" pt={10}>
             <Heading textAlign="left" pl="10%">
@@ -166,7 +176,7 @@ function Menu() {
                           <Button
                             variant="outline"
                             colorScheme="blue"
-                            onClick={() => handleDelete(item.id)}
+                            onClick={() => handleDelete(item.id, item.price)}
                           >
                             Remove
                           </Button>
@@ -179,16 +189,19 @@ function Menu() {
                 <CardFooter>
                   <Flex justify="space-between" gap={130}>
                     <Text>Total Amount: ₹{Math.floor(totalPrice * 81.12)}</Text>
-
-                    <Button
-                      variant="solid"
-                      colorScheme="blue"
-                      mt={2}
-                      // ml="70%"
-                      // onClick={() => handleAdd(el.id)}
-                    >
-                      Buy Now
-                    </Button>
+                    <Link to="/payment-page">
+                      <Button
+                        variant="solid"
+                        colorScheme="blue"
+                        mt={2}
+                        // ml="70%"
+                        // onClick={() => handleAdd(el.id)}
+                        isDisabled={totalPrice === 0 ? true : false}
+                        onClick={handleAddPrice}
+                      >
+                        Buy Now
+                      </Button>
+                    </Link>
                   </Flex>
                 </CardFooter>
               </Card>

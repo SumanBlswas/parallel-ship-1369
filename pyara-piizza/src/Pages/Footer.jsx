@@ -108,6 +108,9 @@ function Footer() {
               h="29px"
             />
           </Flex>
+          <Box pt={4}>
+            <Link to="/admin">Admin Page</Link>
+          </Box>
         </Box>
       </Flex>
       <Divider />
