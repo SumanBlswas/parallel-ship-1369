@@ -11,13 +11,13 @@ function AdminNavbar() {
         <NavLink style={styles} to="/menu">
           <Heading>⬅️</Heading>
         </NavLink>
-        <NavLink style={styles} to="/admin-login/admin/admin-product">
+        <NavLink style={styles} to="/admin-product">
           <Heading>Home</Heading>
         </NavLink>
-        <NavLink style={styles} to="/admin-login/admin/admin-product/post">
+        <NavLink style={styles} to="/post">
           <Heading>Post</Heading>
         </NavLink>
-        <NavLink style={styles} to="/admin-login/admin/admin-product/put">
+        <NavLink style={styles} to="/put">
           <Heading>Put</Heading>
         </NavLink>
       </Box>

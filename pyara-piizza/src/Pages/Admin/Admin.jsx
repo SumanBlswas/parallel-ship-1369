@@ -36,7 +36,7 @@ function Admin() {
             borderRadius="16px"
             boxShadow="-20px 25px 50px 10px"
           >
-            <Link to="/admin-login/admin/admin-product">
+            <Link to="/admin-product">
               <GridItem
                 bg="tomato"
                 p={4}
@@ -47,7 +47,7 @@ function Admin() {
                 <Text>Product Page</Text>
               </GridItem>
             </Link>
-            <Link to="/admin-login/admin/admin-customer">
+            <Link to="/admin-customer">
               <GridItem
                 bg="twitter.400"
                 p={4}

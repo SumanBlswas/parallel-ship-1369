@@ -21,17 +21,17 @@ function AllRoutes() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/payment-page" element={<PaymentPage />} />
         <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/admin-login/admin" element={<Admin />} />
-        <Route path="/admin-login/admin/admin-product" element={<MainPage />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="admin-product" element={<MainPage />} />
         <Route
-          path="/admin-login/admin/admin-customer"
+          path="/admin-customer"
           element={<AdminCustomer />}
         />
         <Route
-          path="/admin-login/admin/admin-product/post"
+          path="/post"
           element={<Post />}
         />
-        <Route path="/admin-login/admin/admin-product/put" element={<Put />} />
+        <Route path="/put" element={<Put />} />
       </Routes>
     </>
   );
