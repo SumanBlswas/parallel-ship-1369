@@ -6,10 +6,12 @@ import CarouselFunction from "./DashboardComponents/Carousel";
 import AppDownload from "./DashboardComponents/AppDownload";
 import SeoContent from "./DashboardComponents/SeoContent";
 import Footer from "./Footer";
+import Navbar from "../components/Navbar";
 
 function Dashboard() {
   return (
     <Box>
+      <Navbar />
       <Box h="89.15px"></Box>
       <Flex align="center" bg="#1A5CA3">
         <Box w="48%" p={20}>

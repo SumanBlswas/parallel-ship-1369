@@ -1,12 +1,6 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Link,
-  Image,
-  Divider,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Divider, Text } from "@chakra-ui/react";
+
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -109,7 +103,7 @@ function Footer() {
             />
           </Flex>
           <Box pt={4}>
-            <Link to="/admin">Admin Page</Link>
+            <Link to="/admin-login">Admin</Link>
           </Box>
         </Box>
       </Flex>

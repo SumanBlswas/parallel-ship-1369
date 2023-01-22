@@ -17,6 +17,7 @@ import React from "react";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
 // import PaymentPage from "./PaymentPage";
+import Navbar from "../../components/Navbar";
 
 function Menu() {
   // let [loading, setLoading] = useState(true);
@@ -25,23 +26,17 @@ function Menu() {
 
   React.useEffect(() => {
     let pizzaApi = async () => {
-      await axios
-        .get(
-          `https://63c2998ce3abfa59bdaf9e62.mockapi.io/suman/api/v12/1/Pizza`
-        )
-        .then((res) => {
-          setData(res.data);
-          console.log(res.data);
-        });
+      await axios.get(`${process.env.REACT_APP_AXIOS_LINK}`).then((res) => {
+        setData(res.data);
+        console.log(res.data);
+      });
     };
     pizzaApi();
   }, []);
 
   let handleAdd = async (id) => {
     await axios
-      .get(
-        `https://63c2998ce3abfa59bdaf9e62.mockapi.io/suman/api/v12/1/Pizza//${id}`
-      )
+      .get(`${process.env.REACT_APP_AXIOS_LINK}/${id}`)
       .then((res) => {
         setCart([...cart, res.data]);
         console.log(res.data);
@@ -63,6 +58,7 @@ function Menu() {
 
   return (
     <Box bgColor="#F5F5F5">
+      <Navbar />
       <SecondNav />
       <Box>
         <Box w="full" h="36px"></Box>
