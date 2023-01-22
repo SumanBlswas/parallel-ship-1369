@@ -1,0 +1,93 @@
+.Main form {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  border-radius: 16px;
+  gap: 10px;
+  box-shadow: 10px 10px 10px 10px;
+  padding: 30px;
+  position: fixed;
+  top: calc(20%);
+}
+
+.div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.Main input[type=text],
+.Main input[type=number] {
+  padding: 25px;
+  font-size: large;
+  border: 2px solid red;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 10px 10px;
+}
+
+.Main input[type=number] {
+  width: 30%;
+}
+
+.Main input[type=submit] {
+  padding: 10px;
+  width: max-content;
+  position: relative;
+  left: 34%;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 50px;
+  font-size: large;
+  cursor: pointer;
+  box-shadow: 10px 10px;
+  margin-top: 30px;
+  background: #f0f0f0;
+}
+
+.Main input[type=submit]:hover {
+  background: #000;
+  color: wheat;
+}
+
+.Main input[type=submit]:active {
+  background: blueviolet;
+  color: white;
+}
+
+.img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* padding-top: 90px; */
+  padding-right: 75px;
+  padding-left: 75px;
+  padding-bottom: 55px;
+}
+
+.img>div {
+  /* padding-top: 5px; */
+  border: 60px solid white;
+  border-radius: 16px;
+}
+
+.img>div>div {
+  border-radius: 35px;
+  padding-top: 30px;
+  border: 20px solid red;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 94, 0);
+  padding: 4px;
+  /* font-size: x-large; */
+  /* font-weight: 800; */
+}
+
+.Main button {
+  border: none;
+}
